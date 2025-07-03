@@ -1,0 +1,43 @@
+<#
+.SYNOPSIS
+    Installs DHCP Server Role and configures a basic IPv4 DHCP scope
+
+.AUTHOR
+    Anthony Jenkins
+#>
+
+# --- Variables ---
+$ScopeName = "Lab-Scope"
+$ScopeStartIP = "192.168.1.100"
+$ScopeEndIP = "192.168.1.200"
+$SubnetMask = "255.255.255.0"
+$ScopeID = "192.168.1.0"
+$DefaultGateway = "192.168.1.1"
+$DNSServer = "192.168.1.10"
+$LeaseDuration = ([TimeSpan]::FromDays(7))
+
+# --- Install DHCP Server Role ---
+Install-WindowsFeature -Name DHCP -IncludeManagementTools
+
+# --- Authorize DHCP in Active Directory ---
+Add-DhcpServerInDC -DnsName $env:COMPUTERNAME -IpAddress (Get-NetIPAddress -AddressFamily IPv4 -InterfaceAlias "Ethernet").IPAddress
+
+# --- Create New DHCP Scope ---
+Add-DhcpServerv4Scope `
+    -Name $ScopeName `
+    -StartRange $ScopeStartIP `
+    -EndRange $ScopeEndIP `
+    -SubnetMask $SubnetMask `
+    -State Active
+
+# --- Set Scope Options ---
+Set-DhcpServerv4OptionValue `
+    -ScopeId $ScopeID `
+    -Router $DefaultGateway `
+    -DnsServer $DNSServer `
+    -DnsDomain "bytecorp.local"
+
+# --- Set Lease Duration (optional) ---
+Set-DhcpServerv4Scope `
+    -ScopeId $ScopeID `
+    -LeaseDuration $LeaseDuration
