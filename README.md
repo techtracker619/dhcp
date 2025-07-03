@@ -15,8 +15,7 @@ Dynamic Host Configuration Protocol (DHCP) is essential for automating IP addres
 ### 1. Open Server Manager
 - Click `Manage` > `Add Roles and Features`.
 
-📸  
-![Step 1](./VirtualBox_AC-DC-SERVER_30_06_2025_01_48_43.png)
+
 
 ---
 
@@ -35,21 +34,20 @@ Dynamic Host Configuration Protocol (DHCP) is essential for automating IP addres
 - When prompted, click **Add Features**.
 - Click **Next** > **Next** > **Install`.
 
-📸  
-![Step 4](./VirtualBox_AC-DC-SERVER_30_06_2025_01_51_27.png)
+![imagealt](https://github.com/techtracker619/dhcp/blob/497b3be5a00e76ab7614c37f44719bbd4d09b975/screenshots/VirtualBox_AC-DC-SERVER_30_06_2025_01_48_43.png)
 
 ---
 
 ### 5. Open DHCP Console
 - Go to **Tools** > **DHCP** from Server Manager.
+![imagealt](https://github.com/techtracker619/dhcp/blob/497b3be5a00e76ab7614c37f44719bbd4d09b975/screenshots/VirtualBox_AC-DC-SERVER_30_06_2025_01_51_27.png)
 
 ---
 
 ### 6. Create New DHCP Scope
 - Right-click on `IPv4` > Select `New Scope`.
 
-📸  
-![Step 6](./VirtualBox_AC-DC-SERVER_30_06_2025_01_58_21.png)
+![imagealt](https://github.com/techtracker619/dhcp/blob/497b3be5a00e76ab7614c37f44719bbd4d09b975/screenshots/VirtualBox_AC-DC-SERVER_30_06_2025_01_58_21.png)
 
 ---
 
@@ -58,8 +56,7 @@ Dynamic Host Configuration Protocol (DHCP) is essential for automating IP addres
   - **Name:** `VM-Test`  
   - **Description:** _(Optional)_
 
-📸  
-![Scope Name](./VirtualBox_AC-DC-SERVER_30_06_2025_01_59_04.png)
+![imagealt](https://github.com/techtracker619/dhcp/blob/497b3be5a00e76ab7614c37f44719bbd4d09b975/screenshots/VirtualBox_AC-DC-SERVER_30_06_2025_01_59_04.png)
 
 ---
 
@@ -67,26 +64,21 @@ Dynamic Host Configuration Protocol (DHCP) is essential for automating IP addres
 - Exclude high IPs like `192.168.1.201` - `192.168.1.255`.
 - Optional: Add subnet delay (e.g., 1ms).
 
-📸  
-![Exclusions](./VirtualBox_AC-DC-SERVER_30_06_2025_02_01_53.png)  
-📸  
-![Exclusions Zoom](./VirtualBox_AC-DC-SERVER_30_06_2025_02_02_14.png)
+![imagealt](https://github.com/techtracker619/dhcp/blob/497b3be5a00e76ab7614c37f44719bbd4d09b975/screenshots/VirtualBox_AC-DC-SERVER_30_06_2025_02_02_14.png)
 
 ---
 
 ### 9. Lease Duration
 - Set lease to `8 Days` or as needed.
 
-📸  
-![Lease Duration](./VirtualBox_AC-DC-SERVER_30_06_2025_02_02_37.png)
+![imagealt](https://github.com/techtracker619/dhcp/blob/497b3be5a00e76ab7614c37f44719bbd4d09b975/screenshots/VirtualBox_AC-DC-SERVER_30_06_2025_02_02_37.png)
 
 ---
 
 ### 10. Configure DHCP Options
 - Choose: **Yes, I want to configure these options now**.
 
-📸  
-![Configure DHCP Options](./VirtualBox_AC-DC-SERVER_30_06_2025_02_02_56.png)
+![imagealt](https://github.com/techtracker619/dhcp/blob/497b3be5a00e76ab7614c37f44719bbd4d09b975/screenshots/VirtualBox_AC-DC-SERVER_30_06_2025_02_02_56.png)
 
 ---
 
@@ -95,8 +87,7 @@ Dynamic Host Configuration Protocol (DHCP) is essential for automating IP addres
 - Server Name: `My Lab Server`  
 - IP: `192.168.100.10`
 
-📸  
-![DNS Settings](./VirtualBox_AC-DC-SERVER_30_06_2025_02_03_50.png)
+![imagealt](https://github.com/techtracker619/dhcp/blob/497b3be5a00e76ab7614c37f44719bbd4d09b975/screenshots/VirtualBox_AC-DC-SERVER_30_06_2025_02_03_50.png)
 
 ---
 
