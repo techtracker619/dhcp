@@ -106,4 +106,13 @@ Dynamic Host Configuration Protocol (DHCP) is essential for automating IP addres
 **Anthony Jenkins**  
 Follow for more labs on Active Directory, DHCP, GPOs, Cybersecurity, and Systems Administration.
 
----
+<!-- 📚 Byte Library Section -->
+<h3>📚 Byte Library</h3>
+<p>
+  Explore free IT & Cybersecurity resources, labs, and articles built for beginners and career switchers.
+  <br />
+  👉 <a href="https://byte-library.com/" target="_blank" style="text-decoration: none; font-weight: bold;">
+    Visit Byte Library
+  </a>
+</p>
+
